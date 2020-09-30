@@ -8,13 +8,13 @@ typedef struct xblink{
 }xBlink;
 void vBlinkTask(void *pvParameters);
 
+xBlink xB0 = {0, 530}; 
+xBlink xB1 = {1, 430}; 
+xBlink xB2 = {2, 330}; 
+xBlink xB3 = {3, 230};
+
 int main()
 {
-	xBlink xB0 = {0, 100}; 
-	xBlink xB1 = {1, 200}; 
-	xBlink xB2 = {2, 300}; 
-	xBlink xB3 = {3, 400};
-
 	LED_Initialize();
 	xTaskCreate(vBlinkTask, "Blink0", configMINIMAL_STACK_SIZE, &xB0, 1, NULL);
 	xTaskCreate(vBlinkTask, "Blink1", configMINIMAL_STACK_SIZE, &xB1, 1, NULL);
