@@ -15,11 +15,13 @@
 
 
 void vBlinkLED4(void *pvParam){
-  const TickType_t xDelay = 500 / portTICK_PERIOD_MS;
+  TickType_t xLastWakeTime;
+  const TickType_t xPeriod = 500 / portTICK_PERIOD_MS;
+  xLastWakeTime = xTaskGetTickCount();
 
   while(1){
     BSP_LED_Toggle(LED4);
-    vTaskDelay(xDelay);
+    vTaskDelayUntil(&xLastWakeTime, xPeriod);
   } // while
 } // vBlinkLED4
 
