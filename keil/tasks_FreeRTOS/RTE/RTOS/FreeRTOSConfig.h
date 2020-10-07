@@ -43,7 +43,13 @@
 
 #if (defined(__ARMCC_VERSION) || defined(__GNUC__) || defined(__ICCARM__))
 #include <stdint.h>
+#ifdef BTL_TM4C1294
 #include "TM4C1294NCPDT.h"
+#endif
+#ifdef BTL_STM32F4
+#include "system_stm32f4xx.h"
+#endif
+
 
 extern uint32_t SystemCoreClock;
 #endif

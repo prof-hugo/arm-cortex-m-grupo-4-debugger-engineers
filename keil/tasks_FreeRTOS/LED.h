@@ -22,6 +22,7 @@
 extern void LED_Initialize(void);
 extern void LED_On        (uint32_t num);
 extern void LED_Off       (uint32_t num);
+extern void LED_Toggle    (uint32_t num);
 extern void LED_Out       (uint32_t value);
 
 #endif

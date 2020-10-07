@@ -63,6 +63,21 @@ void LED_Off (uint32_t num) {
 }
 
 /*----------------------------------------------------------------------------
+  Function that turns on requested LED
+ *----------------------------------------------------------------------------*/
+void LED_Toggle (uint32_t num) {
+
+  if (num < LED_NUM) {
+    switch (num) {
+      case 0: GPION->DATA     ^=  led_mask[num]; break;
+      case 1: GPION->DATA     ^=  led_mask[num]; break;
+      case 2: GPIOF_AHB->DATA ^=  led_mask[num]; break;
+      case 3: GPIOF_AHB->DATA ^=  led_mask[num]; break;
+    }
+  }
+}
+
+/*----------------------------------------------------------------------------
   Function that outputs value to LEDs
  *----------------------------------------------------------------------------*/
 void LED_Out(uint32_t value) {
