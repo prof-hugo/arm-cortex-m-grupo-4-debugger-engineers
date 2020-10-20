@@ -477,6 +477,11 @@
               <FileType>1</FileType>
               <FilePath>.\Driver_STM32F407\LED.c</FilePath>
             </File>
+            <File>
+              <FileName>button.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Driver_STM32F407\button.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -1029,6 +1034,11 @@
               <FileName>LED.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\Driver_STM32F407\LED.c</FilePath>
+            </File>
+            <File>
+              <FileName>button.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Driver_STM32F407\button.c</FilePath>
             </File>
           </Files>
         </Group>
